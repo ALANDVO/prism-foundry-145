@@ -9,8 +9,14 @@
       "acceptance": [
         "Run checks, fix failures, and implement the next planned feature"
       ],
-      "implementation": [],
-      "tests": []
+      "implementation": [
+        "internal/sessions/sessions.go",
+        "internal/router/router.go"
+      ],
+      "tests": [
+        "internal/sessions/sessions_test.go",
+        "internal/router/router_test.go"
+      ]
     }
   ]
 }
