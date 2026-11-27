@@ -1,26 +1,28 @@
 # Changelog
 
+## 1.1.0 — work-in-progress checkpoint
+
+Partial code published for continued development. Known issues: STATUS.md.
+
 ## 1.0.0 — work-in-progress checkpoint
 
 Partial code published for continued development. Known issues: STATUS.md.
 
-# prism-foundry-145 Changelog
-
-## v0.1.0 - 2026-11-23
-
-### Fixed
-- **sessions: panic: close of nil channel** (#2932)
-  - Added nil-channel guard in `publish()`: skips `close()` on nil channels instead of crashing
-  - Added duplicate-path guard in `refresh()`: prevents duplicate paths in `todo` from causing channel overwrites
-  - Updated `statsIn()`: checks channel is non-nil before operating on it
-
 ### Added
-- Session management package (`internal/sessions/`) with refresh/publish lifecycle
-- GUI integration layer (`internal/gui/sessions.go`)
-- Test suite covering the nil-channel fix and related functionality
+- **router: provider capacity fall-through** (#1418 slice)
+  - `internal/router.SelectAvailable` returns the first provider in a group that
+    is not at capacity, preserving priority order, and reports failure when the
+    group is empty or all providers are at capacity.
+  - Tests in `internal/router/router_test.go` (skip-at-capacity, all-at-capacity,
+    empty group, priority order).
+
+### Fixed (prior round, retained)
+- **sessions: panic: close of nil channel** (#2932)
+  - Nil-channel guard in `publish()`; duplicate-path guard in `refresh()`.
 
 ### Notes
-- This is the initial checkpoint; future rounds will add GUI titlebar components, router/provider handling, and i18n release notes.
+- This is an incremental checkpoint; GUI titlebar (#3949), Chinese release notes
+  (#2260), and live router wiring remain planned.
 
 ---
 

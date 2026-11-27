@@ -1,6 +1,6 @@
-# prism-foundry-145
+# prism-foundry-145 — Alan Vo
 
-Current version: `1.0.0`.
+Current version: `1.1.0`.
 
 > Work in progress. This checkpoint may be incomplete or fail tests. See PLAN.md and STATUS.md before use.
 
@@ -24,7 +24,7 @@ go test ./...
 
 1. **Session management core** - Fix nil channel panic (#2932) — DONE
 2. **GUI titlebar/corners** - Address macOS 26/27 titlebar behavior (#3949)
-3. **Router/Provider capacity handling** - "Selected model is at capacity" (#1418)
+3. **Router/Provider capacity handling** - capacity fall-through selector (#1418) — SLICE DONE; live wiring planned
 4. **Release notes i18n** - Chinese release notes support (#2260)
 
 ## Contact
